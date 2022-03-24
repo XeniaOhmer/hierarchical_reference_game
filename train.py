@@ -15,6 +15,7 @@ from egg.core.language_analysis import TopographicSimilarity
 from archs import Sender, Receiver
 import dataset
 
+
 SPLIT = (0.6, 0.2, 0.2)  # split for train, val, and test
 SPLIT_ZERO_SHOT = (0.75, 0.25)  # split for train and val, test set size results from number of dimensions
 
@@ -47,7 +48,7 @@ def get_params(params):
     parser.add_argument('--temp_update', type=float, default=0.99,
                         help="Minimum is 0.5")
     parser.add_argument('--save', type=bool, default=False, help="If set results are saved")
-    parser.add_argument('--num_of_runs', type=int, default=5, help="How often this run should be repeated")
+    parser.add_argument('--num_of_runs', type=int, default=1, help="How often this simulation should be repeated")
     parser.add_argument('--zero_shot', type=bool, default=False,
                         help="If set then zero_shot dataset will be trained and tested")
     parser.add_argument('--balanced_distractors', type=bool, default=False,
