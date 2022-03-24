@@ -10,7 +10,7 @@ For the sake of coherence, the paper describes the relevance vector as indicatin
 
 Agents can be trained using 'train.py'. The file provides explanations for how to configure agents and training using command line parameters. 
 
-For example, to train the agents on data set *D(4,8)* (4 attributes, 8 values), and vocab size factor 3 (default), with the same hyperparameters as in the paper, you can execute
+For example, to train the agents on data set *D(4,8)* (4 attributes, 8 values), with vocab size factor 3 (default), with the same hyperparameters as in the paper, you can execute
 
     python train.py --dimensions 8 8 8 8 --n_epochs 300 --batch_size 32
     
