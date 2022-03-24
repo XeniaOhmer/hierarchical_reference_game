@@ -10,19 +10,19 @@ For the sake of coherence, the paper describes the relevance vector as indicatin
 
 Agents can be trained using 'train.py'. The file provides explanations for how to configure agents and training using command line parameters. 
 
-For example, to train the agents on data set *D(4,8)* (4 attributes, 8 values), and vocab size factor 3 (default), with the same hyperparameters as in the paper, you can execute:
+For example, to train the agents on data set *D(4,8)* (4 attributes, 8 values), and vocab size factor 3 (default), with the same hyperparameters as in the paper, you can execute
 
-    python train.py --dimensions 8 8 8 8 --n_epochs 300 --batch_size 32 
+    python train.py --dimensions 8 8 8 8 --n_epochs 300 --batch_size 32
+    
+Similarly, for data set *D(3, 4)*, the dimensions flag would be 
+
+    --dimensions 4 4 4
 
 Per default, this conducts one run. If you would like to change the number of runs, e.g. to 5, you can specify that using 
 
     --num_of_runs 5
     
-Similarly for data set *D(3, 4)*, the dimension flag would we 
-
-    --dimensions 4 4 4
-    
-If you would like to save the results (interaction file, agent checkpoints, a file storing all hyperparameter values, training and validation accuracies over time, plus test accuracy for generalization to novel objects) you can add the flag:
+If you would like to save the results (interaction file, agent checkpoints, a file storing all hyperparameter values, training and validation accuracies over time, plus test accuracy for generalization to novel objects) you can add the flag
 
     --save True 
     
@@ -30,7 +30,12 @@ If you would like to change the vocab size factor as in the control experiments,
 
     --vocab_size_factor 1
     
-To retrain the agents and evaluate them on zero-shot generalization to novel abstractions, you can execute:
+Or if you would like to change the distractor sampling strategy to "balanced" as in the control experiments, use
+
+    --balanced_distractors True
+    
+    
+To retrain the agents and evaluate them on zero-shot generalization to novel abstractions, you can execute
 
     python train.py --dimensions 8 8 8 8 --zero_shot True --n_epochs 300 --batch_size 32 --num_of_runs 1
 
