@@ -1,7 +1,8 @@
 # hierarchical_reference_game
 
 
-Implementation of a hierarchical reference game using [EGG](https://github.com/facebookresearch/EGG/). The code belongs to the manuscript: "Emergence of hierarchical reference systems in multi-agent communication".
+Implementation of a hierarchical reference game using [EGG](https://github.com/facebookresearch/EGG/). The code belongs to the manuscript: 
+Xenia Ohmer, Marko Duda, Elia Bruni (2022). Emergence of hierarchical reference systems in multi-agent communication.
 
 For the sake of coherence, the paper describes the relevance vector as indicating relevance by "1" and irrelevance by "0". Without loss of generality the implementation reverses this encoding (0:relevant, 1:irrelevant).
 
